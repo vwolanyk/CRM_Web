@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+  </head>
+  <body>
+
+    <h1>Your Contacts</h1>
+
+    <br>
+    <br>
+    <ol>
+      <% @all_contacts.each do |contact|%>
+      <li>
+        <%="#{contact.full_name} EMAIL: #{contact.email}" %>
+        <br>
+        <%="NOTE:  #{contact.note}" %>
+        <br>
+        <br>
+        <% end %>
+  </ol>
+
+</ul>
+  </body>
+</html>

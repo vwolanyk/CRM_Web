@@ -8,11 +8,21 @@ get "/" do
 
 end
 
+get "/index" do
+
+  erb :index
+end
+
 get "/contacts" do
 
   @all_contacts = Contact.all
 
   erb :contacts
+end
+
+get "/about" do
+
+  erb :about
 end
 
 

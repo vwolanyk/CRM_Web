@@ -10,17 +10,22 @@
 
     <br>
     <br>
-    <ol>
+    <ol style="list-style-type:none;">
       <% @all_contacts.each do |contact|%>
       <li>
         <%="#{contact.full_name} EMAIL: #{contact.email}" %>
         <br>
         <%="NOTE:  #{contact.note}" %>
         <br>
+        <hr>
         <br>
         <% end %>
   </ol>
 
 </ul>
+
+<br>
+<br>
+<a href="/">TAKE ME HOME.....</a>
   </body>
 </html>

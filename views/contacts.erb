@@ -1,31 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Contacts</title>
-  </head>
-  <body>
 
-    <h1>Your Contacts</h1>
+
+
+    <h1>CONTACT LIST</h1>
 
     <br>
     <br>
-    <ol style="list-style-type:none;">
+    <div class="contact-count">
+      <p>There are <span class = "contact-count-number"><%=@contact_count%></span> contacts</p>
+
+    </div>
+  <div class="contact-list">
+
+    <ol>
       <% @all_contacts.each do |contact|%>
-      <li>
-        <%="#{contact.full_name} EMAIL: #{contact.email}" %>
+      <div class = "contact-list-item"><li>
+        <p> <span class = "contact-list-name"> <%=contact.full_name%> </span>   ( <%=contact.email%> )
         <br>
-        <%="NOTE:  #{contact.note}" %>
-        <br>
-        <hr>
-        <br>
-        <% end %>
+
+
+          <span class = "contact-edit-delete"><a href="#">Edit</a> | <a href="#">Delete</a></span>
+      </p>
+
+      </li></div>
+    <% end %>
+
   </ol>
 
-</ul>
-
-<br>
-<br>
-<a href="/">TAKE ME HOME.....</a>
-  </body>
-</html>
+  </div>

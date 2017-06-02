@@ -1,0 +1,149 @@
+/*CRM CSS*/
+
+/* BASE styles */
+
+html {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: #333333;
+  text-align: center;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: auto;
+  max-width: 1200px;
+  /*
+    We need to add some padding to the bottom of the body on mobile so that
+     the footer won't get covered by our navigation
+  */
+  /*padding-bottom: 60px;*/
+  background: radial-gradient(circle, rgba(14,35,128,0.75) 0%, rgba(14,35,128,0.9) 45%, rgba(41,234,255,0.95) 74%, rgba(41,234,255,1) 100%);
+
+
+}
+
+/*
+  This rule ensure that all images always fit in their container
+   but are never stretched beyond their native resolution
+*/
+img {
+  max-width: 100%;
+}
+
+
+/* CLEARFIX - for ensuring floated elements are contained in their parent */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Standard LAYOUT EACH PAGE has this*/
+/*****************************************/
+
+main {max-width: 95%;
+      margin: auto;}
+div.header    { background-color: rgba(14,35,128,0.75);
+                padding: 5px;;
+
+}
+
+/*HEADER LAYOUT*/
+
+
+div.header h1 {font-size: 4em;
+                margin: 0;
+                color: rgba(41,234,255,1);
+                margin 0;}
+
+div.header p  {font-style: italic;
+                color:rgba(41,234,255,.6);
+                font-size: 2em;
+                margin: 0;
+
+          }
+
+nav       { margin-top: 10px;}
+div.header-nav { background-color: #90afce;
+
+                 margin-bottom: 5px;
+                 text-align: center;
+                 padding-top: 10px;
+                 padding-bottom: 10px;
+
+        }
+
+div.header-nav a {text-decoration: none;
+                  font-size: 2em;
+                  color: #2F4F4F;
+                  font-weight: bold;
+
+                  }
+
+div.header-nav a:hover {
+                        font-size: 3em;
+                        color: rgba(14,35,128,0.75);
+                                    }
+
+/*Footer LAYOUT*/
+
+footer {background:rgba(14,35,128,0.75);
+        color: rgba(41,234,255,1);
+        text-shadow: 2px 2px   black;
+        padding: 10px;
+        margin-top:10px;}
+hr  {margin:0;
+      padding: 0;}
+
+main h1 { color: darkslate;
+            font-weight: bold;
+            font-size: 2em;
+            /*text-shadow: 5px 5px 50px lightgray;*/
+            margin-bottom: 0;}
+
+main p {color: white;
+    text-align: justify;
+    background-color: rgba(14,35,128,0.3);
+    font-size: 1.5em;
+                      padding: 1em;
+                      margin:0;
+                      text-shadow: 1px 1px black;}
+
+/*Page Specific CSS*/
+
+/*CONTACT LIST PAGE*/
+
+.contact-count-number {font-weight: bolder;
+                        font-size: 1.2em;
+                        text-shadow: 2px 2px black;
+                        color: #90afce;
+
+                       }
+
+
+.contact-list ol {list-style-type: none;
+                  padding:0;
+
+
+                  }
+
+.contact-list-item  li{
+                    margin-left: 0;
+                    background: rgba(41,234,255,.5);
+                    margin: 5px auto;
+                    text-align: justify;
+                     }
+
+
+.contact-edit-delete, .contacts-edit-delete a { color: #2F4F4F;
+                        font-size: .75em;
+                        text-shadow: none;
+                }

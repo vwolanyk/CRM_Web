@@ -9,41 +9,38 @@
     <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
   </head>
 
-    <body>
+  <body>
+
 <!-- Header for ALL pages -->
-  <header>
-    <div class = "header">
-      <h1>CRM</h1>
-      <p>  Making Contact Everywhere You Do  </p>
-    </div >
-    <nav>
-      <div class ="header-nav"><a href="/">Home</a></div>
-      <div class ="header-nav"><a href="/contacts">Contact List</a></div>
-      <div class ="header-nav"><a href="#">ADD Contact</a></div>
-      <div class ="header-nav"><a href="/about">About</a></div>
-    </nav>
+    <header>
+      <div class = "header">
+        <h1>CRM</h1>
+        <p>  Making Contact Everywhere You Do  </p>
+      </div >
+      <nav>
+        <div class ="header-nav"><a href="/">Home</a></div>
+        <div class ="header-nav"><a href="/contacts">Contact List</a></div>
+        <div class ="header-nav"><a href="#">ADD Contact</a></div>
+        <div class ="header-nav"><a href="/about">About</a></div>
+      </nav>
+    </header>
 
+<!-- MAIN SECTION YIELDS TO VIEW PAGES -->
 
-  </header>
+  <main>
 
+    <%= yield %>
 
-<main>
+  </main>
 
-  <%= yield %>
-
-</main>
-
-
-
-  <footer >
-
+<!-- FOOTER ALL PAGES -->
+    <footer >
       <div class="footer_content">
 
         <small> &copy; 2017  &#9889;  Vladymyr Wolanyk &#9889;</small>
 
       </div>
-
-
     </footer>
-    </body>
+    
+  </body>
 </html>

@@ -3,33 +3,23 @@
 /* BASE styles */
 
 html {
-  box-sizing: border-box;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  color: #333333;
-  text-align: center;
-
+        box-sizing: border-box;
+        font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        color: #333333;
+        text-align: center;
 }
 
 *,
 *::before,
-*::after {
-  box-sizing: inherit;
-}
+*::after  {
+            box-sizing: inherit;
+          }
 
-body {
-  margin: auto;
-  max-width: 1200px;
-  /*
-    We need to add some padding to the bottom of the body on mobile so that
-     the footer won't get covered by our navigation
-  */
-  /*padding-bottom: 60px;*/
-  /*background: radial-gradient(circle, rgba(14,35,128,0.75) 100%, rgba(14,35,128,0.9) 23%, rgba(41,234,255,0.95) 37%, rgba(41,234,255,1) 50%);*/
-  background-color: rgba(14,35,128,0.75);
-
-
-}
+body  { margin: auto;
+        max-width: 1200px;
+        background-color: rgba(14,35,128,0.75);
+      }
 
 /*
   This rule ensure that all images always fit in their container
@@ -52,13 +42,13 @@ img {
 
 main {max-width: 95%;
       margin: auto;}
-div.header    { background-color: rgba(14,35,128,0.75);
-                padding: 5px;;
 
-}
 
 /*HEADER LAYOUT*/
 
+div.header    { background-color: rgba(14,35,128,0.75);
+                padding: 5px;;
+}
 
 div.header h1 {font-size: 4em;
                 margin: 0;
@@ -69,30 +59,28 @@ div.header p  {font-style: italic;
                 color:rgba(41,234,255,.6);
                 font-size: 2em;
                 margin: 0;
-
           }
 
-nav       { margin-top: 10px;}
-div.header-nav { background-color: #90afce;
+/* header: nav menu */
 
+nav       { margin-top: 10px;}
+
+div.header-nav { background-color: #90afce;
                  margin-bottom: 5px;
                  text-align: center;
                  padding-top: 10px;
                  padding-bottom: 10px;
-
-        }
+               }
 
 div.header-nav a {text-decoration: none;
                   font-size: 2em;
                   color: #2F4F4F;
                   font-weight: bold;
-
                   }
 
-div.header-nav a:hover {
-                        font-size: 3em;
-                        color: rgba(14,35,128,0.75);
-                                    }
+div.header-nav a:hover {  font-size: 3em;
+                          color: rgba(14,35,128,0.75);
+                        }
 
 /*Footer LAYOUT*/
 
@@ -116,48 +104,49 @@ footer {background:rgba(14,35,128,0.75);
 
 .page-heading h1{margin:0;}
 
+.page-heading.left h1 { text-align: left;
+                        margin-left: 5%;
+                        font-size: 1.25em;
+                        text-shadow: 2px 3px black;}
+
 .page-heading h3{margin:0px;}
 
 
 
-main p {color: white;
-    text-align: justify;
-    background-color: rgba(14,35,128,0.3);
-    font-size: 1.5em;
-                      padding: 1em;
-                      margin:0;
-                      text-shadow: 1px 1px black;}
+main p {  color: white;
+          text-align: justify;
+          background-color: rgba(14,35,128,0.3);
+          font-size: 1.5em;
+          padding: 1em;
+          margin:0;
+          text-shadow: 1px 1px black;}
 
+/************************/
 /*Page Specific CSS*/
+/*************************/
 
 /*CONTACT LIST PAGE*/
 
-
-
-.contact-count-number {font-weight: bolder;
+.contact-count-number { font-weight: bolder;
                         font-size: 1.2em;
                         text-shadow: 2px 2px black;
                         color: #90afce;
-
                        }
 
 
-.contact-list ol {list-style-type: none;
-                  padding:0;
-
-
+.contact-list ol {  list-style-type: none;
+                    padding:0;
                   }
 
 .contact-list-item  li{
-                    margin-left: 0;
-                    background: rgba(41,234,255,.5);
-                    margin: 10px auto;
-                    text-align: justify;
-                    border-radius: 50px;
-
+                        margin-left: 0;
+                        background: rgba(41,234,255,.5);
+                        margin: 10px auto;
+                        text-align: justify;
+                        border-radius: 50px;
                      }
 
-.contact-list-item li p {border-radius: 50px;
+.contact-list-item li p { border-radius: 50px;
                           width:97%;
                           margin-left: 1.5%;}
 
@@ -167,7 +156,8 @@ main p {color: white;
                         text-shadow: none;
                 }
 
-/*SHOW CONTACT PAGE*/
+
+/*SHOW INDIVIDUAL CONTACT PAGE*/
 
 .show-contact-info {width:90%;
                     background: rgba(14,35,128,0.3);
@@ -175,29 +165,25 @@ main p {color: white;
                     padding: 20px;}
 
 
-.show-contact-email p {width: 90%;
+.show-contact-email p { width: 90%;
+                        background: rgba(41,234,255,.4);
+                        margin: auto;
+                        margin-bottom: 1%;
+                        text-align: justify;
+                        border-radius: 50px;}
 
-background: rgba(41,234,255,.4);
-margin: auto;
-margin-bottom: 1%;
 
-text-align: justify;
-border-radius: 50px;}
+.show-contact-email span {  margin-right: 5%; }
 
-.show-contact-email span{
-                          margin-right: 5%;}
 
-.email-address {color: rgba(234,235,236, .9);}
+.email-address {  color: rgba(234,235,236, .9); }
 
-.show-contact-note p {
-width: 90%;
+.show-contact-note p {  width: 90%;
+                        background: rgba(41,234,255,.4);
+                        margin: auto;
+                        text-align: justify;
+                        border-radius: 50px;}
 
-background: rgba(41,234,255,.4);
-margin: auto;
-
-text-align: justify;
-border-radius: 50px;}
-
-.show-contact-note span {margin-left: 5%;
+.show-contact-note span { margin-left: 5%;
                           color: #2F4F4F;
-                            text-shadow: none;}
+                          text-shadow: none;}

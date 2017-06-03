@@ -1,33 +1,20 @@
 
-
-
-
-
-
-
-
-
     <div class="page-heading">
         <h1>CONTACT LIST</h1>
-      <h3> Displaying <span class = "contact-count-number"><%=@contact_count%></span> Contacts</h3>
-
+        <h3> Displaying <span class = "contact-count-number"><%=@contact_count%></span> Contacts</h3>
     </div>
 
   <div class="contact-list">
 
     <ol>
       <% @all_contacts.each do |contact|%>
-      <div class = "contact-list-item"><li>
-        <p> <span class = "contact-list-name"> <%=contact.full_name%> </span>   ( <%=contact.email%> )
-        <br>
-
-
+        <div class = "contact-list-item"><li>
+          <p> <span class = "contact-list-name"> <%=contact.full_name%> </span>   ( <%=contact.email%> )
+          <br>
           <span class = "contact-edit-delete"> <a href = "/contacts/<%=contact.id.to_i%>">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></span>
-      </p>
-
-    </li></div>
-    <% end %>
-
-  </ol>
-
+          </p>
+          </li>
+        </div>
+      <% end %>
+    </ol>
   </div>

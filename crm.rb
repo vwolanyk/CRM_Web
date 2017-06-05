@@ -2,6 +2,14 @@ require_relative 'contact'
 require 'sinatra'
 require 'sinatra/reloader'
 
+
+# def link_to(link_name,link)
+#   "<div class ='header-nav'><a href='#{link}'>#{link_name}</a></div>"
+#
+# end
+
+
+
 # HOME PAGE
 
 get "/" do
@@ -30,8 +38,8 @@ end
 # SINGLE CONTACT FULL LISTING
 
 get "/contacts/:id" do
-
-  @contact = Contact.find(params[:id].to_i)
+@contact = Contact.find_by(id: params[:id].to_i)
+  # @contact = Contact.find(params[:id].to_i)
 
   if @contact
     erb :show_contact
@@ -74,9 +82,20 @@ erb :edit_contact
 
 end
 
-put '/contacts/:id' do
+# DELETE CONTACT
+
+get '/contacts/:id/delete' do
 
 @contact = Contact.find(params[:id].to_i)
+
+erb :delete_contact
+
+end
+
+
+put '/contacts/:id' do
+
+@contact = Contact.find_by(id: params[:id].to_i)
 
   if @contact
     @contact.update(
@@ -87,9 +106,22 @@ put '/contacts/:id' do
     )
 
     redirect to('/contacts')
-
   else
     raise Sinatra::NotFound
+  end
+end
+
+
+delete "/contacts/:id" do
+  @contact = Contact.find_by(id: params[:id].to_i)
+
+  if @contact
+    @contact.delete
+
+    redirect to('/contacts')
+    
+  else
+    raise Sinatra::NotFoung
   end
 end
 

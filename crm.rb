@@ -42,6 +42,14 @@ get "/contacts/:id" do
 
 end
 
+# ADD NEW contact
+
+get "/add_contact" do
+
+  erb :add_contact
+end
+
+
 # ABOUT ME
 get "/about" do
 

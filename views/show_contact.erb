@@ -1,6 +1,7 @@
 
   <div class="page-heading left">
     <h1 ><%= @contact.full_name %></h1>
+    <h2><span class = "contact-edit-delete"> <a href= "/contacts/<%=@contact.id.to_i%>/edit">Edit</a> | <a href="/contacts/<%=@contact.id.to_i%>/delete">Delete</a></span></h2>
   </div>
 
   <div class="show-contact-info">

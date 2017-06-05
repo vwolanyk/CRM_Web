@@ -1,6 +1,7 @@
 
 <div class="page-heading left">
   <h1 >UPDATE: <%= @contact.full_name %></h1>
+  <h2><a href = "/contacts/<%=@contact.id.to_i%>">Back to Contact Info</a></h2>
 </div>
 
 <form  action='/contacts/<%=@contact.id%>' method="post">

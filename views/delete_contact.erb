@@ -2,8 +2,9 @@
     <h1>Are you sure you want to delete <strong><%=@contact.full_name%></strong></h1>
 </div>
 
-<form  action="/contacts/<%=@contact.id%>" method="post">
+<form  action="/contacts/<%=@contact.id.to_i%>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" name="delete" value="YES DELETE">
-
 </form>
+
+<a href="/contacts/<%=@contact.id.to_i%>"><input type="button" name="" value="NOOOOOO!!!!!" ></a>

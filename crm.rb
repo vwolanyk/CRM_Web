@@ -42,12 +42,14 @@ get "/contacts/:id" do
 
 end
 
-# ADD NEW contact
+# ADD NEW contact page with form
 
 get "/add_contact" do
 
   erb :add_contact
 end
+
+# CREATE NEW Contact - then redirects back to contact list
 
 post '/add_contact' do
 
@@ -60,9 +62,17 @@ note:       params[:note],
 
 redirect to('/contacts')
 
-
 end
 
+# Update and Existing Contact
+
+get '/contacts/:id/edit' do
+
+@contact = Contact.find(params[:id].to_i)
+
+erb :edit_contact
+
+end
 
 # ABOUT ME
 get "/about" do

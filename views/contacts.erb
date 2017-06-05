@@ -11,7 +11,7 @@
         <div class = "contact-list-item"><li>
           <p> <span class = "contact-list-name"> <%=contact.full_name%> </span>   (<%=contact.email%>)
           <br>
-          <span class = "contact-edit-delete"> <a href = "/contacts/<%=contact.id.to_i%>">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></span>
+          <span class = "contact-edit-delete"> <a href = "/contacts/<%=contact.id.to_i%>">View</a> | <a href= "/contacts/<%=contact.id.to_i%>/edit">Edit</a> | <a href="#">Delete</a></span>
           </p>
           </li>
         </div>

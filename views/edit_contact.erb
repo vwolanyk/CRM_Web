@@ -3,8 +3,8 @@
   <h1 >UPDATE: <%= @contact.full_name %></h1>
 </div>
 
-<form  action='/add_contact' method="post">
-  <input type="hidded" name='_method' value="put">
+<form  action='/contacts/<%=@contact.id%>' method="post">
+  <input type="hidden" name='_method' value="put">
   <input type="text" name='first_name' value="<%=@contact.first_name%>">
   <input type="text" name="last_name" value="<%=@contact.last_name%>">
   <input type="email" name="email" value="<%=@contact.email%>">

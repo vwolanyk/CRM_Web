@@ -1,0 +1,34 @@
+
+<div class="page-heading left">
+  <h1 >Search Results for "<%=@search_array.join(" ")%>"</h1>
+
+</div>
+
+<h1></h1>
+
+
+<div class="contact-list">
+
+  <ol>
+    <div class = "contact-list-item">
+    <%@all_contacts.each do |contact|%>
+    <% count = 0 %>
+    <% @search_array.each do |term| %>
+    <%if contact.first_name.upcase.include?(term.upcase) || contact.last_name.upcase.include?(term.upcase)|| contact.email.upcase.include?(term.upcase) || contact.note.upcase.include?(term.upcase)%>
+    <%count += 1%>
+    <% end %>
+    <%end%>
+     <%if count > 0%>
+      <li>
+        <p> <span class = "contact-list-name"> <%=contact.full_name%> </span>   (<%=contact.email%>)
+        <br>
+        <span class = "contact-edit-delete"> <a href = "/contacts/<%=contact.id.to_i%>">View</a> | <a href= "/contacts/<%=contact.id.to_i%>/edit">Edit</a> | <a href="/contacts/<%=contact.id.to_i%>/delete">Delete</a></span>
+        </p>
+      </li>
+      <%end%>
+      <% end %>
+      </div>
+
+
+  </ol>
+</div>

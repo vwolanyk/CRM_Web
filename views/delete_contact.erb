@@ -1,5 +1,5 @@
 <div class="page-heading">
-    <h1>Are you sure you want to delete <strong><%=@contact.full_name%></strong></h1>
+    <h1 style="color:red;">Are you sure you want to delete <strong style ="text-decoration:underline;"><%=@contact.full_name.upcase%></strong>?</h1>
 </div>
 
 <form  action="/contacts/<%=@contact.id.to_i%>" method="post">

@@ -119,10 +119,23 @@ delete "/contacts/:id" do
     @contact.delete
 
     redirect to('/contacts')
-    
+
   else
     raise Sinatra::NotFoung
   end
+end
+
+# SEARCH
+
+get '/search' do
+
+@search = params[:search]
+@search_array = @search.split
+@all_contacts = Contact.all
+
+
+erb :search
+
 end
 
 # ABOUT ME
